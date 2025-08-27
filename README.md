@@ -22,7 +22,7 @@ Run:
 
 "ngrok config add-authtoken YOUR_TOKEN_HERE"
 
-- "python3 -m http server 8082" to start sharing locak ip
+- "python3 -m http server 8082" to start sharing local ip
   
 - "./nk2.sh" to start ssh at port 8082 over the internet
   
