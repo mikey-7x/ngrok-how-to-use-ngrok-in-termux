@@ -1,3 +1,5 @@
+## **ngrok:how to use ngrok in termux**
+
 > A practical, step‑by‑step guide to install and use ngrok v3 (and Cloudflare Tunnel) on Termux (Android) to expose local HTTP, SSH and arbitrary TCP services. This README records the real errors encountered, their causes, and exact working solutions so others can reproduce the working setup.
 
 
@@ -29,7 +31,7 @@ Basic familiarity with the Termux shell
 
 ---
 
-# 1) Install ngrok v3 (Termux)
+**1) Install ngrok v3 (Termux)**
 
 **1.1** Detect CPU architecture (choose correct binary)
 ```
@@ -70,7 +72,7 @@ should show something like: ngrok version 3.x.x
 
 ---
 
-# 2) Add your ngrok authtoken (v3)
+**2) Add your ngrok authtoken (v3)**
 
 1. Sign into https://dashboard.ngrok.com and copy your authtoken.
 
@@ -110,7 +112,7 @@ echo 'export USER=$(whoami)' >> ~/.bashrc   # or ~/.zshrc
 
 ---
 
-# 3) Expose an HTTP server (example)
+**3) Expose an HTTP server (example)**
 
 **3.1** Start a simple Python HTTP server
 ```
@@ -130,7 +132,7 @@ ps aux | grep http.server
 kill -9 <PID>
 ```
 
-# or use a different port
+or use a different port
 ```
 python3 -m http.server 9090
 ```
@@ -151,7 +153,7 @@ Open that HTTPS URL in a browser to view your Termux directory listing or served
 
 ---
 
-# 4) Expose SSH (Termux) using ngrok TCP
+**4) Expose SSH (Termux) using ngrok TCP**
 
 Termux openssh typically listens on port 8022 by default (not 22).
 
@@ -181,7 +183,7 @@ Security note: Exposing SSH to the public is sensitive. Use strong passwords, or
 
 ---
 
-# 5) Expose arbitrary TCP service
+**5) Expose arbitrary TCP service**
 
 Replace 8022 in the SSH example with any port your app listens on.
 ```
@@ -193,7 +195,7 @@ then connect to the provided host:port
 
 ---
 
-$ 6) When ngrok fails: use Cloudflare Tunnel (cloudflared)
+**6) When ngrok fails: use Cloudflare Tunnel (cloudflared)**
 
 If ngrok repeatedly fails to connect (ISP blocking, high packet loss, or denied connections), cloudflared quick tunnels are a great fallback.
 
@@ -221,7 +223,7 @@ For production, create a managed tunnel with a Cloudflare account and origin cer
 
 ---
 
-# 7) Troubleshooting (real issues we encountered + fixes)
+**7) Troubleshooting (real issues we encountered + fixes)**
 
 **A.** ERR_NGROK_121 — "agent version too old"
 
@@ -290,7 +292,7 @@ Reduce large file transfers through the tunnel (mobile networks can drop large r
 
 ---
 
-# 8) Handy scripts (paste into Termux and chmod +x)
+**8) Handy scripts (paste into Termux and chmod +x)**
 
 **8.1** install_ngrok_v3.sh — auto install (arm64/arm)
 ```
@@ -355,7 +357,7 @@ echo "Done."
 
 ---
 
-# 9) Security & best practices
+**9) Security & best practices**
 
 Do not expose critical services without authentication or key-based SSH access.
 
@@ -367,7 +369,7 @@ Be mindful of data privacy when tunneling large files through public tunnels.
 
 ---
 
-# 10) Attribution / Copyright
+**10) Attribution / Copyright**
 
 This repository contains documentation and helper scripts only. The following third-party tools are used but are not included in this repo and remain the property of their respective authors:
 
@@ -381,32 +383,40 @@ Termux packages
 
 ---
 
-# 11) Appendix — common commands quick reference
+**11) Appendix — common commands quick reference**
 
 - **install ngrok v3 (arm64)**
+  
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
 tar -xvzf ngrok-v3-stable-linux-arm64.tgz
 chmod +x ngrok
 mv ngrok $PREFIX/bin/
 
 - **add token**
+  
 mkdir -p ~/.config/ngrok
 ngrok config add-authtoken <AUTHTOKEN>
 
 - **if saved to old path, copy it**
+
 cp ~/.ngrok2/ngrok.yml ~/.config/ngrok/ngrok.yml 2>/dev/null || true
 
 - **start http server**
+  
 python3 -m http.server 8080
+
 - **start tunnel**
+
 ngrok http --config ~/.config/ngrok/ngrok.yml 8080
 
 - **SSH (Termux)**
+  
 pkg install openssh -y
 sshd
 ngrok tcp --config ~/.config/ngrok/ngrok.yml 8022
 
 - **cloudflared quick tunnel**
+  
 pkg install cloudflared -y
 cloudflared tunnel --url http://localhost:8080
 
