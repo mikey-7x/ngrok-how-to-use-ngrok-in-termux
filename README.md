@@ -422,4 +422,41 @@ cloudflared tunnel --url http://localhost:8080
 
 
 ---
+## **📜License**
+
+Copyright (c) 2025 Yogesh R. Chauhan
+
+This project contains original scripts and documentation created to simplify the use of
+ngrok v3, cloudflared, and related tools inside Termux (Android).
+
+All third-party software, including but not limited to **ngrok**, **scapy**, and other 
+dependencies, are the property of their respective authors and license holders.  
+This repository does not claim ownership over them.
+
+The scripts and documentation in this repository are released under the MIT License, 
+permitting free use, modification, and distribution, provided that this copyright 
+notice is included.
+
+Third-party software must be used according to their own licenses.
+
+
+
+This project is licensed under the 
+[MIT License](LICENSE).
+You are free to use, modify, and distribute it with proper attribution.
+
+---
+
+## **📜Credits**
+
+Developed by **[mikey-7x](https://github.com/mikey-7x)** 🚀🔥  
+
+
+[other repository](https://github.com/mikey-7x?tab=repositories)
+
+
+
+---
+
+
 
