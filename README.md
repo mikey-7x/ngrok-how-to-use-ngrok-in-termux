@@ -3,6 +3,29 @@
 > A practical, step‑by‑step guide to install and use ngrok v3 (and Cloudflare Tunnel) on Termux (Android) to expose local HTTP, SSH and arbitrary TCP services. This README records the real errors encountered, their causes, and exact working solutions so others can reproduce the working setup.
 
 
+---
+
+**Here is All in one link to my scripts to automate all installation process**
+```
+pkg install git wget
+git clone https://github.com/mikey-7x/ngrok-how-to-use-ngrok-in-termux.git
+```
+
+give permission to run script:
+```
+chmod +x nk1.sh nk2.sh killp.sh rn.sh
+```
+Run:
+-"./mk1.sh" to install ngrokv3,ssh
+
+- then authenticate through token:
+
+"ngrok config add-authtoken YOUR_TOKEN_HERE"
+
+-"python3 -m http server 8082" to start sharing locak ip
+-"./nk2.sh" to start ssh at port 8082 over the internet 
+-"./killp.sh" to kill all process which runs in the termux 
+-"./rn.sh" to uninstall ngrok and related all things including files,folders,package 
 
 
 ---
