@@ -231,7 +231,7 @@ Create a quick tunnel (no Cloudflare account required)
 ```
 cloudflared tunnel --url http://localhost:8080
 ```
-You will get a trycloudflare.com URL like:
+You will get a try cloudflare.com URL like:
 
 https://<random>.trycloudflare.com
 
