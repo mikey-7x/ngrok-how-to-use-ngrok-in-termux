@@ -16,7 +16,7 @@ give permission to run script:
 chmod +x nk1.sh nk2.sh killp.sh rn.sh
 ```
 Run:
-- "./mk1.sh" to install ngrokv3,ssh
+- "./nk1.sh" to install ngrokv3,ssh
 
 - then authenticate through token:
 
