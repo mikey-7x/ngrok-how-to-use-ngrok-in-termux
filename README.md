@@ -1,4 +1,4 @@
-## **ngrok:how to use ngrok in termux**
+## **🐛🪱🐝ngrok:how to use ngrok in termux🐛🪱**
 
 > A practical, step‑by‑step guide to install and use ngrok v3 (and Cloudflare Tunnel) on Termux (Android) to expose local HTTP, SSH and arbitrary TCP services. This README records the real errors encountered, their causes, and exact working solutions so others can reproduce the working setup.
 
