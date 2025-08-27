@@ -18,9 +18,7 @@ chmod +x nk1.sh nk2.sh killp.sh rn.sh
 Run:
 - "./nk1.sh" to install ngrokv3,ssh
 
-- then authenticate through token:
-
-"ngrok config add-authtoken YOUR_TOKEN_HERE"
+- then authenticate through token:"ngrok config add-authtoken YOUR_TOKEN_HERE"
 
 - "python3 -m http server 8082" to start sharing local ip
   
