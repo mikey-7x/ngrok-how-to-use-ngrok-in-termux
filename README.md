@@ -5,7 +5,7 @@
 
 ---
 
-**Here is All in one link to my scripts to automate all installation process**
+**Here is All in one link to install my scripts to automate all installation process**
 ```
 pkg install git wget
 git clone https://github.com/mikey-7x/ngrok-how-to-use-ngrok-in-termux.git
