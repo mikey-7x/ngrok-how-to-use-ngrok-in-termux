@@ -31,7 +31,7 @@ Run:
 
 ---
 
-Quick summary
+**Quick summary**
 
 This guide shows how to install ngrok v3 in Termux (ARM/ARM64), add your auth token, and expose services: HTTP, TCP (SSH), and custom TCP.
 
@@ -43,7 +43,7 @@ Includes small helper scripts to automate starting a server + tunnel and to kill
 
 ---
 
-Prerequisites
+**Prerequisites**
 
 Termux installed on Android (up-to-date pkg repository)
 
