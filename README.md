@@ -16,16 +16,19 @@ give permission to run script:
 chmod +x nk1.sh nk2.sh killp.sh rn.sh
 ```
 Run:
--"./mk1.sh" to install ngrokv3,ssh
+- "./mk1.sh" to install ngrokv3,ssh
 
 - then authenticate through token:
 
 "ngrok config add-authtoken YOUR_TOKEN_HERE"
 
--"python3 -m http server 8082" to start sharing locak ip
--"./nk2.sh" to start ssh at port 8082 over the internet 
--"./killp.sh" to kill all process which runs in the termux 
--"./rn.sh" to uninstall ngrok and related all things including files,folders,package 
+- "python3 -m http server 8082" to start sharing locak ip
+  
+- "./nk2.sh" to start ssh at port 8082 over the internet
+  
+- "./killp.sh" to kill all process which runs in the termux
+  
+- "./rn.sh" to uninstall ngrok and related all things including files,folders,package 
 
 
 ---
